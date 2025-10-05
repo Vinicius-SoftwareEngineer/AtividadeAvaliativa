@@ -18,15 +18,17 @@ public class Caminhao extends Veiculo{
     public void mostrarDados() {
         super.mostrarDados();
         System.out.printf("Capacidade de carga em toneladas: %.2f t\n", capacidadeCarga);
+        System.out.println();
     }
 
     public void mostrarDados(boolean kg){
+        super.mostrarDados();
         if (kg){
             double ckg = capacidadeCarga *1000;
-            super.mostrarDados();
-            System.out.printf("Capacidade de carga em quilogramas: %.2f kg\n", ckg);
+            System.out.printf("Capacidade de carga: %.2f kg\n", ckg);
         }else {
             mostrarDados();
         }
+        System.out.println();
     }
 }

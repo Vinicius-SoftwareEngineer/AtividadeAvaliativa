@@ -18,13 +18,14 @@ public class Carro extends Veiculo {
     public void mostrarDados() {
         super.mostrarDados();
         System.out.println("Número de portas: " + nPortas);
+        System.out.println();
     }
 
     public void mostrarDados(boolean mPortas){
+        super.mostrarDados();
         if (mPortas){
-            mostrarDados();
-        } else {
-            super.mostrarDados();
+            System.out.println("Número de portas: " + nPortas);
         }
+        System.out.println();
     }
 }

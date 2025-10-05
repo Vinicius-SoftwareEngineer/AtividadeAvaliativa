@@ -17,16 +17,14 @@ public class Moto extends Veiculo{
     @Override
     public void mostrarDados() {
         super.mostrarDados();
-        System.out.println("Cilindradas: " + cilindradas);
+        System.out.println();
     }
 
-    public void mostrarDados(boolean cavalos){
-        if (cavalos){
-            double cv = cilindradas / 15.0;
-            super.mostrarDados();
-            System.out.printf("Potência: %.2f cv\n", cv);
-        } else {
-            mostrarDados();
+    public void mostrarDados(boolean eCilindradas){
+        super.mostrarDados();
+        if (eCilindradas){
+            System.out.println("Cilindradas: " + getCilindradas());
         }
+        System.out.println();
     }
 }

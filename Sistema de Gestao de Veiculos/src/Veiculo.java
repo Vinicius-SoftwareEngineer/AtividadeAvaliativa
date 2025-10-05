@@ -37,7 +37,6 @@ public class Veiculo {
         System.out.println("Placa: " + placa);
         System.out.println("Marca: " + marca);
         System.out.printf("Preço: R$ %.2f\n", preco);
-        System.out.println(" ");
     }
 
     public void mostrarDados(double desconto){
@@ -45,8 +44,6 @@ public class Veiculo {
         double dPreco = preco - d;
         System.out.println("Placa: " + placa);
         System.out.println("Marca: " + marca);
-        System.out.printf("Preço: R$ %.2f\n", preco);
-        System.out.printf("Desconto: R$ %.2f\n", d);
-        System.out.printf("Preço com desconto: R$ %.2f\n", dPreco);
+        System.out.printf("Preço: R$ %.2f\n", dPreco);
     }
 }
