@@ -17,14 +17,14 @@ public class ContaPoupanca extends Conta{
     @Override
     public void mostrarDados() {
         super.mostrarDados();
-        System.out.printf("Taxa de rendimento mensal: %.2f%\n", getTaxaRendimentoMensal());
+        System.out.printf("Taxa de rendimento mensal: %.2f%%%n", getTaxaRendimentoMensal());
     }
 
     public void mostrarDados(boolean emTaxaAnual){
         mostrarDados();
         if (emTaxaAnual){
             double ta = getTaxaRendimentoMensal() * 12;
-            System.out.printf("Taxa de rendimento anual(Aproximadamente): %.2f%\n", ta);
+            System.out.printf("Taxa de rendimento anual(Aproximadamente): %.2f%%%n", ta);
         }
     }
 }

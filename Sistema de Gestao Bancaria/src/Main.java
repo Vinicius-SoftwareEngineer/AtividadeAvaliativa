@@ -37,8 +37,10 @@ public class Main {
                             String t1 = sc.nextLine();
                             System.out.print("Saldo Inicial: ");
                             double s1 = sc.nextDouble();
+                            sc.nextLine();
                             System.out.print("Limite do cheque especial: ");
                             double c1 = sc.nextDouble();
+                            sc.nextLine();
                             lista.add(new ContaCorrente(n1, t1, s1, c1));
                             System.out.println("Conta Corrente VRQ cadastrada!");
                             break;
@@ -49,8 +51,10 @@ public class Main {
                             String t2 = sc.nextLine();
                             System.out.print("Saldo Inicial: ");
                             double s2 = sc.nextDouble();
+                            sc.nextLine();
                             System.out.print("Taxa de rendimento mensal(em %): ");
                             double r1 = sc.nextDouble();
+                            sc.nextLine();
                             lista.add(new ContaPoupanca(n2, t2, s2, r1));
                             System.out.println("Conta Poupança VRQ cadastrada!");
                             break;
@@ -61,8 +65,11 @@ public class Main {
                             String t3 = sc.nextLine();
                             System.out.print("Saldo Inicial: ");
                             double s3 = sc.nextDouble();
+                            sc.nextLine();
                             System.out.print("Taxa de administração(em%): ");
                             double ta1 = sc.nextDouble();
+                            sc.nextLine();
+                            lista.add(new ContaInvestimento(n3, t3, s3, ta1));
                             System.out.println("Conta Investimento VRQ cadastrada!");
                             break;
                         default:
@@ -79,17 +86,17 @@ public class Main {
                             System.out.println("\n Conta " + i);
 
                             switch (c.getClass().getSimpleName()) {
-                                case "Conta Corrente":
+                                case "ContaCorrente":
                                     System.out.print("Deseja ver o limite detalhado? (S/N): ");
                                     String r1 = sc.nextLine();
                                     ((ContaCorrente) c).mostrarDados(r1.equalsIgnoreCase("S"));
                                     break;
-                                case "Conta Poupança":
+                                case "ContaPoupanca":
                                     System.out.print("Deseja ver a taxa de rendimento anual? (S/N)");
                                     String r2 = sc.nextLine();
                                     ((ContaPoupanca) c).mostrarDados(r2.equalsIgnoreCase("S"));
                                     break;
-                                case "Conta Investimento":
+                                case "ContaInvestimento":
                                     System.out.print("Deseja ver o saldo líquido? (S/N): ");
                                     String r3 = sc.nextLine();
                                     ((ContaInvestimento) c).mostrarDados(r3.equalsIgnoreCase("S"));

@@ -20,7 +20,7 @@ public class ContaInvestimento extends Conta{
     @Override
     public void mostrarDados() {
         super.mostrarDados();
-        System.out.printf("Taxa de Asministração: %.2f%\n", getTaxaAdministracao());
+        System.out.printf("Taxa de Asministração: %.2f%%%n", getTaxaAdministracao());
         System.out.println();
     }
 
